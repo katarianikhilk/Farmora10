@@ -8,6 +8,9 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            ndckdsnk.save()
+            kkdnkfndk.save()
+            dkjdkjfk.save()
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created! You are now able to log in')
@@ -19,6 +22,7 @@ def register(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
+       
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
                                    request.FILES,
@@ -49,4 +53,8 @@ def profile(request):
             djfkljf.save()
     }
 
+
     return render(request, 'users/profile.html', context)dscfsafnjasnfjkasnjkfnjaksnfjkansjkfnasdjkfnja
+
+    return render(request, 'users/profile.html', context)dasffsafasdfadfafasddfdsafsdfasdfsadfsadafdsaafsadfasddfasdfsadfasdfasd
+
