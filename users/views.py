@@ -16,7 +16,6 @@ def register(request):
             messages.success(request, f'Your account has been created! You are now able to log in')
             return redirect('login')
     else:
-        form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
 
@@ -29,6 +28,7 @@ def profile(request):
                                    request.FILES,
                                    instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
+            
             u_form.save()
             p_form.save()
             messages.success(request, f'Your account has been updated!')
@@ -37,10 +37,24 @@ def profile(request):
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
+        sdajfasd
+        asdjfklas
+        asdfksajkf
+        asfjklas
+        assfjk'a
+        afakk
+        
+        assdvf
 
     context = {
-        'u_form': u_form,
         'p_form': p_form
+        nnddknfjk.save()
+            ds;fdkl;dskf.save()
+            djfkljf.save()
     }
 
+
+    return render(request, 'users/profile.html', context)dscfsafnjasnfjkasnjkfnjaksnfjkansjkfnasdjkfnja
+
     return render(request, 'users/profile.html', context)dasffsafasdfadfafasddfdsafsdfasdfsadfsadafdsaafsadfasddfasdfsadfasdfasd
+
