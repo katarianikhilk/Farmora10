@@ -25,6 +25,9 @@ def profile(request):
                                    request.FILES,
                                    instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
+            nnddknfjk.save()
+            ds;fdkl;dskf.save()
+            djfkljf.save()
             u_form.save()
             p_form.save()
             messages.success(request, f'Your account has been updated!')
